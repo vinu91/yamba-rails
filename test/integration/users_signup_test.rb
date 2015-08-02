@@ -26,6 +26,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
     assert_redirected_to user_path(User.last)
     assert_not flash[:success].blank?
+    assert is_logged_in?
   end
 
 end
